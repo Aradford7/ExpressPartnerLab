@@ -13,7 +13,7 @@ const GotHouses = [
     },
     {
       name: "Aegon (Jon Snow)", 
-      house: "Targaryen",
+      house: "Targaryen/Stark",
       status: "Alive",
       img: "http://tinyurl.com/yxs82xet"
       },

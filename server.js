@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 //db constant
-const GOT = require('./models/GotHouses');
+const GOT = require('./models/Gothouses');
 const bodyParser = require ('body-parser');
 const methodOverride = require ('method-override');
 ///////////////////////////////////////////////////
@@ -18,6 +18,7 @@ app.get('/got/index',(req,res)=>{
 app.get('/got',(req,res)=>{
     res.render('index.ejs',{GotHouses:GOT})
 });
+
 //create the show route
 app.get('/got/:id', (req,res) => {
     res.render('show.ejs',{
