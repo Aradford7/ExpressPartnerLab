@@ -1,13 +1,13 @@
 const express = require('express');
-const fruitRouter = express.Router();
-const fruitController = require('../controller/fruit.js');
+const gotRouter = express.Router();
+const gotController = require('../controller/got.js');
 
-fruitRouter.get('/', fruitController.index);
-fruitRouter.get('/new', fruitController.new);
-fruitRouter.get('/:id', fruitController.show);
-fruitRouter.get('/:id/edit', fruitController.edit);
-fruitRouter.put('/')
-fruitRouter.post('/new', fruitController.create);
-fruitRouter.delete('/:id', fruitController.destroy);
+gotRouter.get('/', gotController.index);
+gotRouter.get('/new', gotController.new);
+gotRouter.get('/:id', gotController.show);
+gotRouter.get('/:id/edit', gotController.edit);
+gotRouter.put('/:id', gotController.update);
+gotRouter.post('/new', gotController.create);
+gotRouter.delete('/:id', gotController.destroy);
 
-module.exports = fruitRouter;
+module.exports = gotRouter;

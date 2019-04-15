@@ -4,28 +4,33 @@ const GOT = require('../model/gothouses.js');
 module.exports = {
   index: (req, res) => {
     res.render('index.ejs', {
-      fruits: Fruit
+      GotHouses: GOT
     });
   },
   show: (req, res) => {
-    res.send(Fruit[req.params.id]);
+    res.send(GOT[req.params.id]);
   },
   new: (req, res) => {
     res.render('new.ejs');
   },
   create: (req, res) => {
-    Fruit.push(req.body);
-    console.log(req.body);
-    res.redirect('/fruit');
+    GOT.push(req.body);
+    //console.log(req.body);
+    res.redirect('/got');
   },
   edit: (req,res) => {
       res.render('edit.ejs', {
-          fruit:Fruit[req.params.id]
-      });
+          GotHouses:GOT[req.params.id],
+          id: req.params.id
+    });
     
   },
+  update: (req,res) => {
+      GOT[req.params.id] = req.body;
+      res.redirect('/got');
+  },
   destroy: (req, res) => {
-    Fruit.splice(req.params.id, 1);
-    res.redirect('/fruit');
+    GOT.splice(req.params.id, 1);
+    res.redirect('/got');
   }
 };
