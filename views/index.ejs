@@ -13,6 +13,11 @@
                         <li>
                             <%= GotHouses[i].name%>
                             <a href = "/got/<%=i%>">Show</a>
+
+
+                            <form action="/got/<%=i%>?_method=DELETE" method="POST">
+                                    <button type="submit">Delete</button>
+                            </form>
                         </li>
                     <% } %>
                 </ul>

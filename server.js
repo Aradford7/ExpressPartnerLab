@@ -24,6 +24,13 @@ app.get('/got/:id', (req,res) => {
         GotHouses:GOT[req.params.id]
     });
 });
+
+//create a delete route
+app.delete('/got/:id', (req, res) => {
+
+    Fruits.splice(req.params.id, 1);
+    res.redirect('/got');
+  });
 ///////////// set listener//////////////
 app.listen(port,()=>{
     console.log("app listening on PartnerLab port:",port);
