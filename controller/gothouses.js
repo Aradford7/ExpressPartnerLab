@@ -4,7 +4,7 @@ const GOT = require('../models/Gothouses.js');
 module.exports = {
   index: (req, res) => {
     res.render('index.ejs', {
-      GotHouses: GOT
+      GotHouses:GOT
     });
   },
   show: (req, res) => {
@@ -32,6 +32,7 @@ module.exports = {
       res.redirect('/got');
   },
   destroy: (req, res) => {
+    console.log("hello")
     GOT.splice(req.params.id, 1);
     res.redirect('/got');
   }

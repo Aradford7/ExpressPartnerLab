@@ -10,10 +10,11 @@ const gotRouter = require ('./routes/gothouses.js');
 
 ///////////////////////////////////////////////////
 //////////MiddleWare/////////////////////////////
-app.use('/got', gotRouter);    //connecting server to router
+
 app.use('/css/', express.static(__dirname +'/css'))  //css styling
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+app.use('/got', gotRouter);    //connecting server to router
 
 /////////////////////////////////////////////////
 //index route show GOT connection
