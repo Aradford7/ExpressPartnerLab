@@ -11,12 +11,13 @@
                 <ul class = "gotcharacters">
                     <%GotHouses.forEach((GotHouses,i)=> {%>
                     <div><%=GotHouses.name%></div>
+                     <a href = "/got/<%=i%>/edit">Edit</a>
                      <a href = "/got/<%=i%>">Show</a>
                     <form method = "POST" action = "/got/<%=i%>?_method=DELETE">
                         <button type = "submit">DELETE</button>
                     </form>
                     <%})%>
-
+                        
                  
                     
                 </ul>
