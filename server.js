@@ -45,3 +45,9 @@ app.use('/got', gotRouter);    //connecting server to router
 app.listen(port,()=>{
     console.log("app listening on PartnerLab port:",port);
 });
+
+
+
+/// SERVER NEEDS A ROUTER
+//ROUTER NEEDS CONTROLLER
+//CONTROLLER NEEDS MODEL

@@ -9,7 +9,9 @@ module.exports = {
   },
   show: (req, res) => {
     res.render('show.ejs',{
-    GotHouses:GOT[req.params.id]});
+    GotHouses:GOT[req.params.id],
+    id:req.params.id
+  });
    
   },
   new: (req, res) => {
