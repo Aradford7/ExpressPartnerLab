@@ -8,9 +8,11 @@
     </head>
     <body>
             <h1> Edit Game of Thrones </h1>
-            <form method = "POST" action = "/got">
-                <input  name = "name" value =" <%=GotHouses.name%>"/>
-                <button type = "submit"> </button>
+            <form method = "POST" action = "/got/<%=id%>?_method=PUT">
+                <input  name = "name" value =" <%=GotHouses.name%>"/> name <br/> 
+                <input name = "house" value =" <%=GotHouses.house%>"/> house <br/>
+                <input name = "status" value = " <%=GotHouses.status%>"/>status <br/>
+                <button type = "submit">Submit</button>
                 <a href = "/got">Return To Index</a>
             </form>
     </body>
