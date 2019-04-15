@@ -7,19 +7,18 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-         <h1>Game of Thrones Index Page (index.ejs)</h1>
+         <h1>Game of Thrones Index Page</h1>
                 <ul class = "gotcharacters">
-                    <% for(let i = 0; i < GotHouses.length; i++){%>
-                        <li>
-                            <%= GotHouses[i].name%>
-                            <a href = "/got/<%=i%>">Show</a>
+                    <%GotHouses.forEach((GotHouses,i)=> {%>
+                    <div><%=GotHouses.name%></div>
+                     <a href = "/got/<%=i%>">Show</a>
+                    <form method = "POST" action = "/got/<%=i%>?_method=DELETE">
+                        <button type = "submit">DELETE</button>
+                    </form>
+                    <%})%>
 
-
-                            <form action="/got/<%=i%>?_method=DELETE" method="POST">
-                                    <button type="submit">Delete</button>
-                            </form>
-                        </li>
-                    <% } %>
+                 
+                    
                 </ul>
     
     </body>
