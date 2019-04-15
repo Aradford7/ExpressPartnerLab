@@ -1,4 +1,4 @@
-const GOT = require('../model/gothouses.js');
+const GOT = require('../models/Gothouses.js');
 
 
 module.exports = {
@@ -8,7 +8,9 @@ module.exports = {
     });
   },
   show: (req, res) => {
-    res.send(GOT[req.params.id]);
+    res.render('show.ejs',{
+    GotHouses:GOT[req.params.id]});
+   
   },
   new: (req, res) => {
     res.render('new.ejs');

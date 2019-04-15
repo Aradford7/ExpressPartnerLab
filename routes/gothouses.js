@@ -1,6 +1,6 @@
 const express = require('express');
 const gotRouter = express.Router();
-const gotController = require('../controller/got.js');
+const gotController = require('../controller/gothouses.js');
 
 gotRouter.get('/', gotController.index);
 gotRouter.get('/new', gotController.new);

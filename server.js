@@ -6,6 +6,7 @@ const port = 3000;
 //const GOT = require('./models/Gothouses');
 const bodyParser = require ('body-parser');  //editing
 const methodOverride = require ('method-override'); //deleting
+const gotRouter = require ('./routes/gothouses.js');
 
 ///////////////////////////////////////////////////
 //////////MiddleWare/////////////////////////////
