@@ -14,6 +14,8 @@ const gotRouter = require ('./routes/gothouses.js');
 app.use('/css/', express.static(__dirname +'/css'))  //css styling
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
+
 app.use('/got', gotRouter);    //connecting server to router
 
 /////////////////////////////////////////////////
